@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tous en Scène, association musicale de Guerville. Concerts, jam sessions, scènes ouvertes et ateliers pour tous les passionnés.">
+<title>Tous en Scène | Association musicale de Guerville</title>
+
+<style>
+:root {
+  --noir: #121212;
+  --orange: #ff741e;
+  --jaune: #ffd329;
+  --blanc: #ffffff;
+  --fond: #f7f7f5;
+  --texte: #292929;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+  line-height: 1.65;
+}
+a { color: #ad4300; }
+header {
+  background: var(--noir);
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--jaune);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+nav a:hover { color: var(--jaune); }
+
+.hero {
+  background:
+    radial-gradient(circle at 75% 15%, #69310d 0%, transparent 45%),
+    linear-gradient(145deg, #111111, #222222);
+  color: white;
+  text-align: center;
+  padding: 65px 20px 85px;
+}
+.hero-logo {
+  display: block;
+  width: min(280px, 72vw);
+  height: auto;
+  margin: 0 auto 25px;
+}
+.hero h1 {
+  color: var(--jaune);
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.1;
+  margin: 10px 0 20px;
+  letter-spacing: 2px;
+}
+.hero .subtitle {
+  color: white;
+  font-size: clamp(18px, 3vw, 23px);
+  font-weight: bold;
+}
+.hero p {
+  max-width: 720px;
+  margin: 15px auto;
+}
+.actions { margin-top: 30px; }
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  margin: 5px;
+  border-radius: 30px;
+  background: var(--orange);
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform .2s, background .2s;
+}
+.btn:hover {
+  background: var(--jaune);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--jaune);
+  color: var(--jaune);
+}
+.btn-outline:hover { color: #111; }
+
+section {
+  padding: 65px 7%;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  font-size: clamp(27px, 4vw, 36px);
+  text-align: center;
+  color: #111;
+  margin: 0 0 28px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--orange), var(--jaune));
+  border-radius: 5px;
+  margin: 12px auto 0;
+}
+.intro {
+  max-width: 820px;
+  margin: auto;
+  text-align: center;
+  font-size: 17px;
+}
+.white { background: white; }
+.dark {
+  background: #171717;
+  color: white;
+}
+.dark h2 { color: var(--jaune); }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 35px;
+}
+.card {
+  padding: 28px;
+  border-radius: 14px;
+  background: white;
+  color: #292929;
+  border-top: 5px solid var(--orange);
+  box-shadow: 0 4px 20px #00000012;
+}
+.card .emoji { font-size: 36px; }
+.card h3 {
+  margin: 12px 0;
+  color: #b94b00;
+}
+.card p { margin-bottom: 0; }
+.center { text-align: center; }
+.membership {
+  max-width: 750px;
+  margin: auto;
+  padding: 35px 25px;
+  background: #fff4d7;
+  border: 2px solid var(--jaune);
+  border-radius: 20px;
+  text-align: center;
+}
+.membership .price {
+  font-size: 38px;
+  font-weight: 900;
+  color: #b94b00;
+}
+.contact-links {
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-size: 17px;
+}
+.contact-links p { margin: 15px 0; }
+footer {
+  background: #0c0c0c;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+footer strong { color: var(--jaune); }
+footer p { margin: 8px; }
+
+@media (max-width: 650px) {
+  header { justify-content: center; text-align: center; }
+  nav { justify-content: center; gap: 12px; }
+  nav a { font-size: 13px; }
+  .hero { padding: 45px 18px 65px; }
+  section { padding: 48px 6%; }
+  .intro { font-size: 16px; }
+  .membership { padding: 25px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="#accueil">TOUS EN SCÈNE</a>
+  <nav aria-label="Navigation principale">
+    <a href="#association">L'association</a>
+    <a href="#activites">Activités</a>
+    <a href="#ateliers">Ateliers</a>
+    <a href="#adhesion">Adhésion</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<div class="hero" id="accueil">
+  <img
+    class="hero-logo"
+    src="logo-tous-en-scene-transparent.png"
+    alt="Logo officiel de Tous en Scène"
+  >
+  <h1>TOUS EN SCÈNE</h1>
+  <p class="subtitle">
+    L'association musicale de Guerville pour tous les passionnés !
+  </p>
+  <p>
+    Rencontrer, jouer, partager, découvrir et vibrer ensemble.
+    Parce que la musique est avant tout une aventure humaine !
+  </p>
+  <div class="actions">
+    <a class="btn" href="#association">Découvrir l'association</a>
+    <a class="btn btn-outline" href="#adhesion">Nous rejoindre</a>
+  </div>
+</div>
+
+<section id="association" class="white">
+  <div class="container">
+    <h2>Bienvenue chez Tous en Scène !</h2>
+    <div class="intro">
+      <p>
+        Tous en Scène est une association musicale basée à
+        Guerville, dans les Yvelines (78).
+      </p>
+      <p>
+        Notre mission est de réunir les passionnés de musique,
+        chanteurs et instrumentistes, de tous âges et de tous niveaux.
+      </p>
+      <p>
+        Musiciens amateurs, professionnels et intermittents
+        du spectacle : chacun a sa place parmi nous.
+      </p>
+      <p>
+        Nous défendons une pratique musicale ouverte, conviviale
+        et sans élitisme, fondée sur le partage, la collaboration
+        et l'entraide.
+      </p>
+      <p><strong>
+        Ensemble, faisons vivre la musique et donnons
+        à chacun l'envie de monter sur scène !
+      </strong></p>
+    </div>
+  </div>
+</section>
+
+<section id="activites">
+  <div class="container">
+    <h2>Nos activités</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="emoji">🎸</div>
+        <h3>Jam sessions</h3>
+        <p>
+          Des rencontres pour jouer ensemble, improviser,
+          échanger et partager de bons moments musicaux.
+        </p>
+      </article>
+      <article class="card">
+        <div class="emoji">🎤</div>
+        <h3>Scènes ouvertes</h3>
+        <p>
+          Des occasions de monter sur scène, de se lancer
+          et de faire découvrir son univers musical.
+        </p>
+      </article>
+      <article class="card">
+        <div class="emoji">🎶</div>
+        <h3>Concerts</h3>
+        <p>
+          Des événements pour faire découvrir les artistes,
+          les groupes et les talents de notre territoire.
+        </p>
+      </article>
+      <article class="card">
+        <div class="emoji">🤝</div>
+        <h3>Projets collectifs</h3>
+        <p>
+          Des rencontres et collaborations pour faire naître
+          de nouvelles aventures musicales.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="ateliers" class="dark">
+  <div class="container">
+    <h2>Nos ateliers musicaux</h2>
+    <div class="intro">
+      <p>
+        Apprendre, expérimenter, progresser et partager
+        ses connaissances dans une ambiance bienveillante.
+      </p>
+      <p>
+        Tous en Scène propose des ateliers autour de
+        l'interprétation scénique, du chant, de l'écriture
+        de chansons et d'autres pratiques artistiques.
+      </p>
+      <p>
+        Des formats accessibles, complémentaires
+        à l'enseignement musical traditionnel.
+      </p>
+      <a class="btn" href="mailto:tousensceneguerville@gmail.com?subject=Informations%20ateliers">
+        Se renseigner sur les ateliers
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="adhesion" class="white">
+  <div class="container">
+    <h2>Rejoignez Tous en Scène</h2>
+    <div class="membership">
+      <div style="font-size:40px">🧡</div>
+      <h3>Devenez membre de l'association</h3>
+      <div class="price">50 € à vie</div>
+      <p>
+        Une seule adhésion pour rejoindre notre aventure
+        et soutenir la vie musicale locale.
+      </p>
+      <p>
+        Participez à la dynamique associative, rencontrez
+        d'autres passionnés et découvrez nos activités.
+      </p>
+      <a class="btn"
+         href="mailto:tousensceneguerville@gmail.com?subject=Adh%C3%A9sion%20Tous%20en%20Sc%C3%A8ne">
+        Je souhaite adhérer
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Restons en contact !</h2>
+    <div class="contact-links">
+      <p>
+        Une question, une idée de collaboration
+        ou un projet musical ? Contactez-nous !
+      </p>
+      <p>📍 Guerville – Yvelines (78)</p>
+      <p>
+        ✉️ <a href="mailto:tousensceneguerville@gmail.com">
+        tousensceneguerville@gmail.com</a>
+      </p>
+      <p>
+        📸 Instagram :
+        <a href="https://www.instagram.com/tousensceneguerville/"
+           target="_blank" rel="noopener noreferrer">
+          @tousensceneguerville
+        </a>
+      </p>
+      <p>
+        🎵 Facebook :
+        <a href="https://www.facebook.com/TousEnScene"
+           target="_blank" rel="noopener noreferrer">
+          Tous en Scène
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><strong>TOUS EN SCÈNE</strong></p>
+  <p>L'association musicale de Guerville</p>
+  <p>La musique se partage, la passion nous rassemble !</p>
+  <p>© 2026 Tous en Scène</p>
+</footer>
+
+</body>
+</html>
