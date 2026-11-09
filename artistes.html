@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Découvrez les artistes et groupes de Tous en Scène à Guerville. Demandez une prestation musicale pour votre événement.">
+<title>Nos artistes & groupes | Tous en Scène</title>
+<style>
+:root{--noir:#121212;--orange:#ff741e;--jaune:#ffd329;--blanc:#fff}
+*{box-sizing:border-box}body{margin:0;font:16px/1.55 Arial,Helvetica,sans-serif;background:#f7f7f5;color:#222}
+header{background:var(--noir);padding:18px 6%;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header a{color:var(--jaune);font-weight:800;text-decoration:none}nav a{color:white;font-weight:400;margin-left:16px}
+.hero{background:linear-gradient(130deg,#111,#42250f);color:white;text-align:center;padding:62px 20px}
+h1{font-size:clamp(30px,6vw,52px);color:var(--jaune);margin:0 0 12px}.hero p{max-width:750px;margin:12px auto}
+main{max-width:1200px;margin:auto;padding:45px 6% 70px}.intro{text-align:center;margin:0 auto 32px;max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:25px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 22px #0001;border-top:5px solid var(--orange);display:flex;flex-direction:column}
+.card img{width:100%;height:205px;object-fit:cover;background:#222}.content{padding:20px;display:flex;flex-direction:column;flex:1}
+.card h2{font-size:22px;margin:0 0 5px;color:#ad4300}.style{font-size:14px;font-weight:bold;color:#555;margin:0 0 8px}.description{flex:1}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.btn{display:inline-block;background:var(--orange);color:#111;padding:10px 16px;border-radius:28px;font-weight:bold;text-decoration:none;font-size:14px}.btn:hover{background:var(--jaune)}.secondary{background:#222;color:white}
+.note{margin-top:38px;background:#fff2d1;border-left:5px solid var(--orange);padding:20px;border-radius:8px}footer{background:#111;color:white;text-align:center;padding:30px 15px}footer a{color:var(--jaune)}
+@media(max-width:650px){header{justify-content:center;text-align:center}nav a{margin:0 8px}.hero{padding:45px 16px}main{padding:30px 5% 55px}}
+</style></head><body>
+<header><a href="index.html">TOUS EN SCÈNE</a><nav><a href="index.html">Accueil</a><a href="index.html#agenda">Agenda</a><a href="index.html#contact">Contact</a></nav></header>
+<div class="hero"><h1>Nos artistes & groupes</h1><p>Du rock à la soul, de l'acoustique aux concerts festifs : découvrez les talents réunis autour de Tous en Scène.</p></div>
+<main><p class="intro">Vous organisez une fête de ville, un événement associatif, une soirée privée ou un concert ? Découvrez nos formations et contactez Tous en Scène pour étudier votre projet.</p>
+<div id="artistes" class="grid"></div>
+<div class="note"><strong>Vous souhaitez organiser un événement ?</strong><p>Toutes les demandes de prestations sont actuellement centralisées par l'association Tous en Scène.</p><a class="btn" href="mailto:tousensceneguerville@gmail.com?subject=Demande%20de%20prestation%20musicale">Contacter l'association</a></div>
+</main><footer><strong>TOUS EN SCÈNE</strong><p>La musique nous rassemble !</p><a href="index.html">Retour à l'accueil</a></footer>
+<script>
+// POUR AJOUTER UN GROUPE : dupliquer un objet dans cette liste.
+// Pour publier plus tard ses coordonnées, renseigner contactPublic (e-mail)
+// ou telephonePublic (numéro). Les champs vides ne s'affichent pas.
+const artistes = [
+  {
+    "nom": "Acoustic Avenue",
+    "style": "Pop, rock, variété acoustique",
+    "description": "Duo voix-guitare qui revisite les grands titres pop-rock, entre ambiance intimiste et énergie communicative.",
+    "photo": "acoustic-avenue.jpg",
+    "lien": "https://www.instagram.com/duo.acoustic.avenue/",
+    "libelleLien": "Instagram",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Dom Plus",
+    "style": "Soul, blues, pop, jazz, musiques caribéennes",
+    "description": "Une formation acoustique modulable autour de la chanteuse Dom, entre reprises éclectiques et compositions originales.",
+    "photo": "dom-plus.jpg",
+    "lien": "",
+    "libelleLien": "",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Dr Rock & The Famous Merengo",
+    "style": "Soft rock californien, compositions",
+    "description": "Des compositions originales aux harmonies vocales soignées, inspirées du soft rock américain et britannique.",
+    "photo": "dr-rock.jpg",
+    "lien": "https://youtube.com/channel/UCVeZK6RSQvY_3zTqctfzSzQ",
+    "libelleLien": "YouTube",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "DynamiX",
+    "style": "Pop-rock",
+    "description": "Quatre musiciens réunis pour faire vibrer le public avec des classiques rock, une voix puissante et une énergie contagieuse.",
+    "photo": "dynamix.jpg",
+    "lien": "https://www.instagram.com/dynamix_rockgroupe/",
+    "libelleLien": "Instagram",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Juste Filip",
+    "style": "Variété, humour musical, country, blues",
+    "description": "Un artiste solo qui mêle chant, guitare, boucles et humour, avec des formats participatifs et des animations musicales.",
+    "photo": "juste-filip.jpg",
+    "lien": "https://youtu.be/oNMSNbOig_c",
+    "libelleLien": "Vidéo",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "PulP",
+    "style": "Soul, funk, électro, jazz et percussions",
+    "description": "Un cocktail musical groovy et cuivré, porté par une grande formation à l’énergie communicative.",
+    "photo": "pulp.jpg",
+    "lien": "https://www.instagram.com/pulpgroup/",
+    "libelleLien": "Instagram",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Season",
+    "style": "Rock californien, reprises",
+    "description": "Sept musiciens et trois voix lead pour revisiter le son west coast des années 70 et 80, dans une atmosphère chaleureuse et vintage.",
+    "photo": "season.jpg",
+    "lien": "https://youtu.be/DFQ1IMdbwro",
+    "libelleLien": "Vidéo",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Soul paraDOX",
+    "style": "Soul, blues, jazz et musiques du monde",
+    "description": "Un univers acoustique métissé, entre groove, reprises en plusieurs langues et atmosphère élégante.",
+    "photo": "soul-paradox.jpg",
+    "lien": "https://www.facebook.com/SoulparaDOX.Trio",
+    "libelleLien": "Facebook",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "The Brownies",
+    "style": "Pop-rock",
+    "description": "Un trio aux parcours complémentaires qui revisite un vaste répertoire pop-rock, de Police à Radiohead en passant par Blondie.",
+    "photo": "the-brownies.jpg",
+    "lien": "https://www.youtube.com/@Les.Brownies",
+    "libelleLien": "YouTube",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "The ROOsters",
+    "style": "Pop-rock, reprises et compositions",
+    "description": "Cinq artistes pour un concert dynamique mêlant grands classiques rock, pop-rock et compositions originales.",
+    "photo": "the-roosters.jpg",
+    "lien": "https://www.facebook.com/ROOstersROCK",
+    "libelleLien": "Facebook",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Velvet Echoes",
+    "style": "Pop-rock acoustique",
+    "description": "Un duo voix-guitare qui revisite les chansons avec sensibilité, groove et énergie, pour des moments musicaux intimistes.",
+    "photo": "velvet-echoes.jpg",
+    "lien": "https://www.facebook.com/share/1CWUrRJAXS/",
+    "libelleLien": "Facebook",
+    "contactPublic": "",
+    "telephonePublic": ""
+  }
+];
+const conteneur=document.getElementById('artistes');
+artistes.forEach(a=>{
+ const article=document.createElement('article');article.className='card';
+ const img=document.createElement('img');img.src=a.photo;img.alt='Photo de '+a.nom;img.loading='lazy';article.appendChild(img);
+ const c=document.createElement('div');c.className='content';
+ const h=document.createElement('h2');h.textContent=a.nom;c.appendChild(h);
+ const st=document.createElement('p');st.className='style';st.textContent=a.style;c.appendChild(st);
+ const d=document.createElement('p');d.className='description';d.textContent=a.description;c.appendChild(d);
+ const actions=document.createElement('div');actions.className='actions';
+ function bouton(texte,url,secondaire){const l=document.createElement('a');l.className='btn'+(secondaire?' secondary':'');l.href=url;l.textContent=texte;if(url.startsWith('https://')){l.target='_blank';l.rel='noopener noreferrer'}actions.appendChild(l)}
+ bouton('Demander une prestation','mailto:tousensceneguerville@gmail.com?subject='+encodeURIComponent('Demande de prestation - '+a.nom),false);
+ if(a.lien)bouton(a.libelleLien||'Découvrir',a.lien,true);
+ if(a.contactPublic)bouton('E-mail artiste','mailto:'+a.contactPublic,true);
+ if(a.telephonePublic)bouton('Appeler artiste','tel:'+a.telephonePublic.replace(/[^+\d]/g,''),true);
+ c.appendChild(actions);article.appendChild(c);conteneur.appendChild(article);
+});
+</script></body></html>
