@@ -200,6 +200,22 @@ footer p { margin: 8px; }
   .intro { font-size: 16px; }
   .membership { padding: 25px 18px; }
 }
+/* AGENDA OPENAGENDA */
+
+.agenda-widget {
+  margin: 35px auto;
+  max-width: 1000px;
+  min-height: 250px;
+}
+
+.agenda-widget .oa-agenda {
+  margin: 0;
+  width: 100%;
+}
+
+#agenda .center {
+  margin-top: 25px;
+}
 </style>
 </head>
 
@@ -210,6 +226,7 @@ footer p { margin: 8px; }
   <nav aria-label="Navigation principale">
     <a href="#association">L'association</a>
     <a href="#activites">Activités</a>
+    <a href="#agenda">Agenda</a>
     <a href="#ateliers">Ateliers</a>
     <a href="#adhesion">Adhésion</a>
     <a href="#contact">Contact</a>
@@ -307,6 +324,56 @@ footer p { margin: 8px; }
   </div>
 </section>
 
+<!-- AGENDA TOUS EN SCÈNE -->
+<section id="agenda" class="white">
+  <div class="container">
+
+    <h2>📅 Nos prochains événements</h2>
+
+    <div class="intro">
+      <p>
+        Concerts, jam sessions, scènes ouvertes,
+        ateliers et rencontres musicales :
+        retrouvez toute notre actualité !
+      </p>
+    </div>
+
+    <div class="agenda-widget">
+
+      <blockquote
+        class="oa-agenda"
+        align="center"
+        data-filters="search,geo,timings"
+        data-base-url="oa">
+
+        <p lang="fr">
+          Voir les événements de
+          <a href="https://openagenda.com/agendas/80123556">
+            <b>Tous en Scène</b>
+          </a>
+        </p>
+
+      </blockquote>
+
+    </div>
+
+    <div class="center">
+      <a class="btn"
+         href="https://openagenda.com/fr/tous-en-scene"
+         target="_blank"
+         rel="noopener noreferrer">
+        🗓️ Voir notre agenda complet
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script async
+  src="https://cdn.openagenda.com/js/widgets.js"
+  charset="utf-8">
+</script>
+  
 <section id="ateliers" class="dark">
   <div class="container">
     <h2>Nos ateliers musicaux</h2>
