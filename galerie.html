@@ -1,51 +1,108 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Photos et vidéos des concerts, bœufs, ateliers et événements de Tous en Scène à Guerville.">
-<title>Tous en Scène en images | Photos et vidéos</title>
-<style>
-:root{--orange:#ff741e;--jaune:#ffd329;--noir:#121212}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.55 Arial,Helvetica,sans-serif;background:#f7f7f5;color:#222}header{background:var(--noir);padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}header a{color:var(--jaune);font-weight:800;text-decoration:none}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:white;font-weight:400}.hero{background:linear-gradient(125deg,#111,#43240c);color:#fff;text-align:center;padding:65px 20px}h1{color:var(--jaune);font-size:clamp(30px,6vw,52px);margin:0 0 12px}.hero p{max-width:780px;margin:auto}main{max-width:1200px;margin:auto;padding:38px 6% 65px}.intro{text-align:center;max-width:790px;margin:0 auto 32px}.categories{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:38px}.categories a,.button{display:inline-block;background:var(--orange);color:#151515;padding:10px 17px;border-radius:24px;text-decoration:none;font-weight:bold}.categories a:hover,.button:hover{background:var(--jaune)}section{margin:0 0 50px;scroll-margin-top:20px}h2{font-size:27px;border-left:5px solid var(--orange);padding-left:14px;margin:0 0 12px}.hint{color:#555;margin:0 0 19px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.album{background:white;border-radius:14px;overflow:hidden;box-shadow:0 5px 20px #0001;border-top:5px solid var(--orange)}.cover{min-height:180px;background:linear-gradient(130deg,#252525,#6b3619);color:var(--jaune);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:48px}.album img{width:100%;height:205px;object-fit:contain;display:block}.album .body{padding:18px}.album h3{margin:0 0 6px;font-size:20px}.album p{margin:0 0 14px;color:#555}.album a{color:#a84200;font-weight:bold}.album .photo-link{display:block}.album .photo-link img{height:310px;object-fit:cover}.social-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.social-links a{display:inline-block;background:#222;color:white;text-decoration:none;padding:10px 14px;border-radius:24px;font-weight:bold}.social-links a:hover{background:var(--orange);color:#111}.notice{background:#fff1d0;border-left:5px solid var(--orange);border-radius:8px;padding:18px;margin-top:25px}footer{background:#111;color:white;text-align:center;padding:30px 15px}footer a{color:var(--jaune)}@media(max-width:650px){header{justify-content:center;text-align:center}nav{justify-content:center;gap:12px}.hero{padding:45px 16px}main{padding:28px 5% 50px}}
-.album img,
-.featured img {
-  width: 100%;
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
-}
-.featured{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;background:#fff;border-radius:14px;overflow:hidden;margin:18px 0 25fit:contain;display:block}.featured div{padding:22px}.featured h3{font-size:24px}.video-title{margin-top:35px}.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:15px 0 25px}.video-grid video{width:100%;display:block;background:#111;max-height:420px}@media(max-width:650px){.featured{grid-template-columns:1fr}.featured img{height:auto}.featured div{padding:16px}}
-</style>px;border-top:5px solid var(--orange)}.featured img{display/ block;width:100%;height:auto;max-height:440px;object-
-</head>
-<body>
-<header><a href="index.html">TOUS EN SCÈNE</a><nav><a href="index.html">Accueil</a><a href="artistes.html">Artistes</a><a href="index.html#agenda">Agenda</a><a href="index.html#contact">Contact</a></nav></header>
-<div class="hero"><h1>Tous en Scène en images</h1><p>Revivez les moments qui font vibrer notre association : concerts, bœufs musicaux, ateliers, rencontres et événements festifs. Parce que la musique, c'est avant tout une aventure humaine !</p></div>
-<main>
-<p class="intro">Retrouvez les moments forts de nos événements ! De nouveaux souvenirs seront ajoutés au fil des rencontres.</p>
-<div class="categories"><a href="#concerts">Concerts</a><a href="#boeufs">Bœufs & scènes ouvertes</a><a href="#ateliers">Ateliers</a><a href="#fetes">Événements festifs</a></div>
-<section id="concerts"><h2>🎸 Nos concerts</h2><p class="hint">L'énergie de la scène et les rencontres avec le public.</p><div class="grid">
-<article class="album"><div class="cover" aria-hidden="true">🎤</div><div class="body"><h3>Nos concerts en images</h3><p>Les premiers albums photo et vidéos arrivent bientôt.</p></div></article>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Galerie des concerts, bœufs musicaux, ateliers et événements de Tous en Scène à Guerville"><title>Galerie | Tous en Scène</title><style>*{box-sizing:border-box}body{margin:0;font:16px/1.55 Arial,sans-serif;background:#f7f7f5;color:#222}header,footer{background:#141414;color:white;padding:22px 6%}header{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}header a,footer a{color:#ffd329;text-decoration:none}nav{display:flex;gap:16px;flex-wrap:wrap}nav a{color:white}.hero{background:linear-gradient(120deg,#111,#63351a);color:white;text-align:center;padding:60px 20px}h1{color:#ffd329;font-size:clamp(32px,5vw,54px);margin:0}main{max-width:1250px;margin:auto;padding:30px 5%}.tabs{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 40px}.tabs a{background:#ff741e;color:#111;border-radius:30px;padding:9px 16px;text-decoration:none;font-weight:bold}section{margin:0 0 55px;scroll-margin-top:20px}h2{border-left:5px solid #ff741e;padding-left:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:22px}.album{background:white;border-radius:14px;overflow:hidden;box-shadow:0 3px 16px #0002}.album h3{margin:0 0 8px}.body{padding:18px}.body p{margin:0 0 12px}.media{display:grid;gap:9px;padding:10px;background:#f1f1f1}.media img{width:100%;height:auto;max-height:none;object-fit:contain;display:block;border-radius:5px}.media video{display:block;width:100%;height:auto;max-height:420px;background:#111}.media iframe{width:100%;aspect-ratio:16/9;border:0}.empty{background:#242424;color:#ffd329;padding:30px;text-align:center;font-size:36px}.links a{display:inline-block;margin:4px 12px 4px 0;color:#a84200;font-weight:bold}footer{text-align:center}.note{font-size:14px;color:#555}</style></head><body>
+<header><a href="index.html"><strong>TOUS EN SCÈNE</strong></a><nav><a href="index.html">Accueil</a><a href="artistes.html">Artistes</a><a href="index.html#agenda">Agenda</a><a href="index.html#contact">Contact</a></nav></header>
+<div class="hero"><h1>Tous en Scène en images</h1><p>Concerts, bœufs musicaux, ateliers et moments de partage : revivez la vie de l’association !</p></div>
+<main><div class="tabs"><a href="#concerts">Concerts</a><a href="#boeufs">Bœufs & scènes ouvertes</a><a href="#ateliers">Ateliers</a><a href="#fetes">Événements festifs</a></div>
+<section id="concerts"><h2>🎸 Nos concerts</h2><div class="grid">
+<article class="album">
+<div class="media">
+<iframe loading="lazy" src="https://www.youtube.com/embed/xkZ9fn_0tQE" title="DynamiX – 50 ans des pompiers de Magnanville – Vidéo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe loading="lazy" src="https://www.youtube.com/embed/sVb10tgbGXU" title="DynamiX – 50 ans des pompiers de Magnanville – Vidéo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<div class="body"><h3>DynamiX – 50 ans des pompiers de Magnanville</h3><p>Concert anniversaire des pompiers de Magnanville.</p>
+<div class="links"><a href="https://www.facebook.com/share/1J4SVTQF2M/" target="_blank" rel="noopener noreferrer">Voir la publication Facebook</a></div>
+</div></article>
+<article class="album">
+<div class="media">
+<video controls preload="none" playsinline src="medias/IMG_2696.mp4" aria-label="Vidéo : Dr Rock – Victoria Station, Méré">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Dr Rock – Victoria Station, Méré</h3><p>Concert live.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<video controls preload="none" playsinline src="medias/IMG_6780.mp4" aria-label="Vidéo : Soul paraDOX – Smile, Saint-Quentin-en-Yvelines">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Soul paraDOX – Smile, Saint-Quentin-en-Yvelines</h3><p>Concert au Smile.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<video controls preload="none" playsinline src="medias/IMG_0360.mp4" aria-label="Vidéo : Soul paraDOX – Victoria Station, Méré">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Soul paraDOX – Victoria Station, Méré</h3><p>Concert live.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<video controls preload="none" playsinline src="medias/IMG_4057.mp4" aria-label="Vidéo : Eardrums Rapers – Octobre Rose 2025">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Eardrums Rapers – Octobre Rose 2025</h3><p>Concert solidaire pour Octobre Rose.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<video controls preload="none" playsinline src="medias/IMG_5148.mp4" aria-label="Vidéo : Tous en Scène &amp; Muzikado – Fête de la Musique 2026">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Tous en Scène &amp; Muzikado – Fête de la Musique 2026</h3><p>Guerville : la musique partagée !</p>
+</div></article>
+<article class="album">
+<div class="media">
+<img src="medias/IMG_4695.jpeg" alt="Season – Victoria Station, Méré" loading="lazy">
+<img src="medias/IMG_4696.jpeg" alt="Season – Victoria Station, Méré" loading="lazy">
+<video controls preload="none" playsinline src="medias/IMG_4697.mp4" aria-label="Vidéo : Season – Victoria Station, Méré">Votre navigateur ne prend pas en charge la vidéo.</video>
+<video controls preload="none" playsinline src="medias/IMG_4698.mp4" aria-label="Vidéo : Season – Victoria Station, Méré">Votre navigateur ne prend pas en charge la vidéo.</video>
+<video controls preload="none" playsinline src="medias/IMG_4694.mp4" aria-label="Vidéo : Season – Victoria Station, Méré">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Season – Victoria Station, Méré</h3><p>Concert live.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<video controls preload="none" playsinline src="medias/IMG_4547.mp4" aria-label="Vidéo : Season – The Backstage, Montrouge">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Season – The Backstage, Montrouge</h3><p>Concert live.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<img src="medias/IMG_1465.jpeg" alt="The ROOsters – Viroflay" loading="lazy">
+<img src="medias/IMG_1467.jpeg" alt="The ROOsters – Viroflay" loading="lazy">
+</div>
+<div class="body"><h3>The ROOsters – Viroflay</h3><p>Concert en plein air.</p>
+</div></article>
+<article class="album">
+<div class="empty" aria-hidden="true">♫</div>
+<div class="body"><h3>Acoustic Avenue – Le Vert’ige, Vert</h3><p>14 février 2026. Concert live.</p>
+</div></article>
 </div></section>
-<section id="boeufs"><h2>🥁 Nos bœufs et scènes ouvertes</h2><p class="hint">Des musiciens qui se retrouvent pour jouer, partager et improviser.</p><div class="grid">
-<article class="album"><div class="cover" aria-hidden="true">🎶</div><div class="body"><h3>Les rencontres musicales</h3><p>Photos et vidéos à venir.</p></div></article>
+<section id="boeufs"><h2>🥁 Nos bœufs & scènes ouvertes</h2><div class="grid">
+<article class="album">
+<div class="media">
+<img src="medias/IMG_3210.jpeg" alt="Bœuf musical – La Grange, Guerville" loading="lazy">
+<img src="medias/IMG_3212.jpeg" alt="Bœuf musical – La Grange, Guerville" loading="lazy">
+<video controls preload="none" playsinline src="medias/IMG_3214.mp4" aria-label="Vidéo : Bœuf musical – La Grange, Guerville">Votre navigateur ne prend pas en charge la vidéo.</video>
+<video controls preload="none" playsinline src="medias/IMG_3215.mp4" aria-label="Vidéo : Bœuf musical – La Grange, Guerville">Votre navigateur ne prend pas en charge la vidéo.</video>
+<video controls preload="none" playsinline src="medias/IMG_3217.mp4" aria-label="Vidéo : Bœuf musical – La Grange, Guerville">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Bœuf musical – La Grange, Guerville</h3><p>14 juin 2025. Musiciens et chanteurs réunis au club-house.</p>
+</div></article>
+<article class="album">
+<div class="media">
+<img src="medias/7cecdfca-09ab-43f3-b651-9276f770105e.jpeg" alt="Bœuf musical – La Grange, Guerville" loading="lazy">
+<img src="medias/481ff366-7f84-4891-9d99-c15cd15e0c9a.jpeg" alt="Bœuf musical – La Grange, Guerville" loading="lazy">
+<img src="medias/02a6b53e-771b-4a76-acc0-5ff25be4d2f9.jpeg" alt="Bœuf musical – La Grange, Guerville" loading="lazy">
+<video controls preload="none" playsinline src="medias/IMG_4449.mp4" aria-label="Vidéo : Bœuf musical – La Grange, Guerville">Votre navigateur ne prend pas en charge la vidéo.</video>
+</div>
+<div class="body"><h3>Bœuf musical – La Grange, Guerville</h3><p>8 février 2026. Rencontre musicale conviviale.</p>
+</div></article>
 </div></section>
-<section id="ateliers"><h2>🎼 Nos ateliers</h2><p class="hint">Apprendre, essayer, progresser et partager ses expériences.</p><div class="grid">
-<article class="album"><div class="cover" aria-hidden="true">🎙️</div><div class="body"><h3>La musique se partage</h3><p>Photos et vidéos à venir.</p></div></article>
+<section id="ateliers"><h2>🎼 Nos ateliers</h2><div class="grid">
+<article class="album">
+<div class="empty" aria-hidden="true">♫</div>
+<div class="body"><h3>Atelier – Chanter en anglais</h3><p>Un temps d’apprentissage et de partage autour de la musique.</p>
+</div></article>
 </div></section>
-<section id="fetes"><h2>🎃 Nos événements festifs</h2><p class="hint">Halloween, Octobre Rose et les autres moments de convivialité.</p><div class="featured"><a href="halloween-2026-photo-10.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-10.jpeg" alt="Photo collective des musiciens sur scène à Halloween 2026" loading="lazy"></a><div><h3>Halloween 2026 : la musique en fête !</h3><p>31 octobre 2026 · Senneville</p><p>Retrouvez les costumes, les artistes et les moments partagés pendant cette soirée festive.</p></div></div><div class="grid">
-<article class="album"><a class="photo-link" href="halloween-2026-photo-1.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-1.jpeg" alt="Personne déguisée pour Halloween, avec lunettes fantaisie, cape noire et accessoire de cinéma devant un décor de citrouilles" loading="lazy"></a><div class="body"><h3>Halloween : des costumes hauts en couleur !</h3><p>31 octobre 2026 · Senneville</p><a href="halloween-2026-photo-1.jpeg" target="_blank" rel="noopener">Agrandir la photo</a></div></article>
-<article class="album"><a class="photo-link" href="halloween-2026-photo-2.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-2.jpeg" alt="Trois personnes posant ensemble en costumes de fête d'Halloween" loading="lazy"></a><div class="body"><h3>La fête, c'est aussi le plaisir de se déguiser</h3><p>31 octobre 2026 · Senneville</p><a href="halloween-2026-photo-2.jpeg" target="_blank" rel="noopener">Agrandir la photo</a></div></article>
-<article class="album"><a class="photo-link" href="halloween-2026-photo-3.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-3.jpeg" alt="Guitare sur scène lors de la soirée Halloween 2026" loading="lazy"></a><div class="body"><h3>Guitare sur scène</h3><p>Halloween 2026 · Senneville</p></div></article>
-<article class="album"><a class="photo-link" href="halloween-2026-photo-4.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-4.jpeg" alt="Solo de guitare lors de la soirée Halloween 2026" loading="lazy"></a><div class="body"><h3>Solo de guitare</h3><p>Halloween 2026 · Senneville</p></div></article>
-<article class="album"><a class="photo-link" href="halloween-2026-photo-6.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-6.jpeg" alt="Basse sur scène lors de la soirée Halloween 2026" loading="lazy"></a><div class="body"><h3>Basse sur scène</h3><p>Halloween 2026 · Senneville</p></div></article>
-<article class="album"><a class="photo-link" href="halloween-2026-photo-7.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-7.jpeg" alt="Batterie en concert lors de la soirée Halloween 2026" loading="lazy"></a><div class="body"><h3>Batterie en concert</h3><p>Halloween 2026 · Senneville</p></div></article>
-<article class="album"><a class="photo-link" href="halloween-2026-photo-9.jpeg" target="_blank" rel="noopener"><img src="halloween-2026-photo-9.jpeg" alt="Duo vocal lors de la soirée Halloween 2026" loading="lazy"></a><div class="body"><h3>Duo vocal</h3><p>Halloween 2026 · Senneville</p></div></article>
-</div><h3 class="video-title">🎬 Les vidéos de la soirée</h3><div class="video-grid"><div class="album"><video controls preload="metadata" playsinline aria-label="Vidéo 1 de la soirée Halloween 2026"><source src="halloween-2026-video-1.mp4" type="video/mp4">Votre navigateur ne prend pas en charge la vidéo.</video><div class="body"><h3>Halloween en vidéo · 1</h3></div></div><div class="album"><video controls preload="metadata" playsinline aria-label="Vidéo 2 de la soirée Halloween 2026"><source src="halloween-2026-video-2.mp4" type="video/mp4">Votre navigateur ne prend pas en charge la vidéo.</video><div class="body"><h3>Halloween en vidéo · 2</h3></div></div></div>
-<div class="social-links" aria-label="Publications partagées autour de l'événement">
-<a href="https://www.facebook.com/share/p/1EXLmA6Vcz/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Publication Facebook 1 ↗</a>
-<a href="https://www.facebook.com/share/p/1FMSebXhap/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Publication Facebook 2 ↗</a>
-<a href="https://www.instagram.com/p/DffNAd4l2ID/?psln=MzdhbDI2dzUyenVq" target="_blank" rel="noopener noreferrer">Publication Instagram ↗</a>
-<a href="https://www.facebook.com/share/p/1CZBkuZhxM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Publication Facebook 3 ↗</a>
+<section id="fetes"><h2>🎃 Nos événements festifs</h2><div class="grid">
+<article class="album">
+<div class="media">
+<img src="medias/halloween-2026-photo-1.jpeg" alt="Halloween 2026 – Guerville" loading="lazy">
+<img src="medias/halloween-2026-photo-2.jpeg" alt="Halloween 2026 – Guerville" loading="lazy">
+</div>
+<div class="body"><h3>Halloween 2026 – Guerville</h3><p>Une journée festive réunissant les associations et les artistes.</p>
+</div></article>
 </div></section>
-<div class="notice"><strong>Vous avez des photos ou vidéos d'un événement Tous en Scène ?</strong><p>Vous pouvez nous contacter pour partager vos souvenirs. Merci de ne transmettre que des images que vous êtes autorisé à partager.</p><a class="button" href="mailto:tousensceneguerville@gmail.com?subject=Photos%20et%20vid%C3%A9os%20Tous%20en%20Sc%C3%A8ne">Nous écrire</a></div>
-</main><footer><strong>TOUS EN SCÈNE</strong><p>La musique nous rassemble !</p><a href="index.html">Retour à l'accueil</a></footer>
-</body></html>
+<p class="note">Vous avez des images à partager ? Écrivez-nous à <a href="mailto:tousensceneguerville@gmail.com">tousensceneguerville@gmail.com</a>.</p></main><footer>TOUS EN SCÈNE · <a href="index.html">Retour à l’accueil</a></footer></body></html>
