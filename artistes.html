@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Découvrez les artistes et groupes de Tous en Scène à Guerville. Demandez une prestation musicale pour votre événement." name="description"/>
-<title>Nos artistes &amp; groupes | Tous en Scène</title>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Découvrez les artistes et groupes de Tous en Scène à Guerville. Demandez une prestation musicale pour votre événement.">
+<title>Nos artistes & groupes | Tous en Scène</title>
 <style>
 :root{--noir:#121212;--orange:#ff741e;--jaune:#ffd329;--blanc:#fff}
 *{box-sizing:border-box}body{margin:0;font:16px/1.55 Arial,Helvetica,sans-serif;background:#f7f7f5;color:#222}
@@ -19,160 +18,169 @@ main{max-width:1200px;margin:auto;padding:45px 6% 70px}.intro{text-align:center;
 .note{margin-top:38px;background:#fff2d1;border-left:5px solid var(--orange);padding:20px;border-radius:8px}footer{background:#111;color:white;text-align:center;padding:30px 15px}footer a{color:var(--jaune)}
 @media(max-width:650px){header{justify-content:center;text-align:center}nav a{margin:0 8px}.hero{padding:45px 16px}main{padding:30px 5% 55px}}
 
-.card .photo-placeholder{height:205px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#191919,#593113);color:var(--jaune);font-size:46px}
-.card.upcoming{border-top-color:var(--jaune)}
-.card.upcoming .style{color:#a54c13}
-nav a:focus-visible,.btn:focus-visible{outline:3px solid var(--jaune);outline-offset:3px}
+/* Catalogue interactif */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.catalogue-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;margin:0 0 18px}
+.catalogue-tools input,.catalogue-tools select{font:inherit;padding:13px 15px;border:1px solid #bbb;border-radius:12px;background:white;min-height:48px}
+.catalogue-tools input{flex:1 1 260px;max-width:480px}.catalogue-tools select{flex:0 1 230px}
+.results-count{text-align:center;margin:0 0 25px;color:#555}
+.card[hidden]{display:none!important}.empty-result[hidden]{display:none!important}.card img{object-position:center 30%}.card:focus-within,.card:hover{box-shadow:0 10px 30px #0002;transform:translateY(-3px)}.card{transition:transform .2s,box-shadow .2s}
+.empty-result{padding:30px;text-align:center;background:#fff;border-radius:12px}
+@media(max-width:650px){.catalogue-tools input,.catalogue-tools select{width:100%;max-width:none;flex:1 1 100%}}
 </style></head><body>
-<header><a href="index.html">TOUS EN SCÈNE</a><nav><a href="index.html">Accueil</a><a href="index.html#agenda">Agenda</a><a href="documents.html#documents">Documents</a><a href="index.html#contact">Contact</a></nav></header>
-<div class="hero"><h1>Nos artistes &amp; groupes</h1><p>Du rock à la soul, de l'acoustique aux concerts festifs : découvrez les talents réunis autour de Tous en Scène.</p></div>
+<header><a href="index.html">TOUS EN SCÈNE</a><nav><a href="index.html">Accueil</a><a href="index.html#agenda">Agenda</a><a href="index.html#contact">Contact</a></nav></header>
+<div class="hero"><h1>Nos artistes & groupes</h1><p>Du rock à la soul, de l'acoustique aux concerts festifs : découvrez les talents réunis autour de Tous en Scène.</p></div>
 <main><p class="intro">Vous organisez une fête de ville, un événement associatif, une soirée privée ou un concert ? Découvrez nos formations et contactez Tous en Scène pour étudier votre projet.</p>
-<!-- Pour ajouter un groupe, dupliquer une fiche <article> ci-dessous. -->
-<div class="grid" id="artistes">
-<!-- FICHE : Acoustic Avenue -->
-<article class="card">
-<img alt="Photo de Acoustic Avenue" loading="lazy" src="acoustic-avenue.jpg"/>
-<div class="content">
-<h2>Acoustic Avenue</h2>
-<p class="style">Pop, rock, variété acoustique</p>
-<p class="description">Duo voix-guitare qui revisite les grands titres pop-rock, entre ambiance intimiste et énergie communicative.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Acoustic%20Avenue">Demander une prestation</a><a class="btn secondary" href="https://www.instagram.com/duo.acoustic.avenue/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="btn secondary" href="https://www.instagram.com/reel/Cxw9m7oojMM/" rel="noopener noreferrer" target="_blank">Vidéo</a></div>
+<div class="catalogue-tools" role="search" aria-label="Rechercher un artiste">
+<label for="recherche" class="sr-only">Rechercher un artiste</label>
+<input id="recherche" type="search" placeholder="🔎 Rechercher un artiste, un style…" autocomplete="off" aria-label="Rechercher un artiste ou un style">
+<select id="filtre-style" aria-label="Filtrer par univers musical"><option value="">Tous les univers musicaux</option><option value="rock">Rock / Pop</option><option value="soul">Soul / Blues / Jazz</option><option value="acoustique">Acoustique</option><option value="autre">Autres univers</option></select>
+<button type="button" id="effacer" class="btn secondary">Effacer les filtres</button>
 </div>
-</article>
-<!-- FICHE : Dom Plus -->
-<article class="card">
-<img alt="Photo de Dom Plus" loading="lazy" src="dom-plus.jpg"/>
-<div class="content">
-<h2>Dom Plus</h2>
-<p class="style">Soul, blues, pop, jazz, musiques caribéennes</p>
-<p class="description">Une formation acoustique modulable autour de la chanteuse Dom, entre reprises éclectiques et compositions originales.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Dom%20Plus">Demander une prestation</a></div>
-</div>
-</article>
-<!-- FICHE : Dr Rock &amp; The Famous Merengo -->
-<article class="card">
-<img alt="Photo de Dr Rock &amp; The Famous Merengo" loading="lazy" src="dr-rock.jpg"/>
-<div class="content">
-<h2>Dr Rock &amp; The Famous Merengo</h2>
-<p class="style">Soft rock californien, compositions</p>
-<p class="description">Des compositions originales aux harmonies vocales soignées, inspirées du soft rock américain et britannique.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Dr%20Rock%20%26%20The%20Famous%20Merengo">Demander une prestation</a><a class="btn secondary" href="https://inouiedistribution.pro/dr-rock-and-the-famous-merengo/" rel="noopener noreferrer" target="_blank">Page artiste</a><a class="btn secondary" href="https://www.facebook.com/share/1CcfBDC5d4/" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://youtube.com/@drrockthefamousmerengo5944" rel="noopener noreferrer" target="_blank">YouTube</a></div>
-</div>
-</article>
-<!-- FICHE : DynamiX -->
-<article class="card">
-<img alt="Photo de DynamiX" loading="lazy" src="dynamix.jpg"/>
-<div class="content">
-<h2>DynamiX</h2>
-<p class="style">Pop-rock</p>
-<p class="description">Quatre musiciens réunis pour faire vibrer le public avec des classiques rock, une voix puissante et une énergie contagieuse.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=DynamiX">Demander une prestation</a><a class="btn secondary" href="https://www.instagram.com/dynamix_rockgroupe/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="btn secondary" href="https://www.facebook.com/share/16wzrzQVKd/" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://youtube.com/playlist?list=PLnE4yWfaULnjWwPR9MhcZLsrFSVJ4vv7D" rel="noopener noreferrer" target="_blank">YouTube</a></div>
-</div>
-</article>
-<!-- FICHE : Juste Filip -->
-<article class="card">
-<img alt="Photo de Juste Filip" loading="lazy" src="juste-filip.jpg"/>
-<div class="content">
-<h2>Juste Filip</h2>
-<p class="style">Variété, humour musical, country, blues</p>
-<p class="description">Un artiste solo qui mêle chant, guitare, boucles et humour, avec des formats participatifs et des animations musicales.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Juste%20Filip">Demander une prestation</a><a class="btn secondary" href="https://www.facebook.com/share/1JJ65RnbdB/" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://youtu.be/oNMSNbOig_c" rel="noopener noreferrer" target="_blank">Vidéo 1</a><a class="btn secondary" href="https://youtu.be/SEJwwS7ATWc" rel="noopener noreferrer" target="_blank">Vidéo 2</a><a class="btn secondary" href="https://youtu.be/pvWzRb1dUhk" rel="noopener noreferrer" target="_blank">Vidéo 3</a></div>
-</div>
-</article>
-<!-- FICHE : PulP -->
-<article class="card">
-<img alt="Photo de PulP" loading="lazy" src="pulp.jpg"/>
-<div class="content">
-<h2>PulP</h2>
-<p class="style">Soul, funk, électro, jazz et percussions</p>
-<p class="description">Un cocktail musical groovy et cuivré, porté par une grande formation à l’énergie communicative.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=PulP">Demander une prestation</a><a class="btn secondary" href="https://www.instagram.com/pulpgroup/" rel="noopener noreferrer" target="_blank">Instagram</a><a class="btn secondary" href="https://www.instagram.com/hoopsandgroove/" rel="noopener noreferrer" target="_blank">Hoops and Groove</a><a class="btn secondary" href="https://www.instagram.com/reel/DW3oykZDIWz/" rel="noopener noreferrer" target="_blank">Vidéo</a></div>
-</div>
-</article>
-<!-- FICHE : Season -->
-<article class="card">
-<img alt="Photo de Season" loading="lazy" src="season.jpg"/>
-<div class="content">
-<h2>Season</h2>
-<p class="style">Rock californien, reprises</p>
-<p class="description">Sept musiciens et trois voix lead pour revisiter le son west coast des années 70 et 80, dans une atmosphère chaleureuse et vintage.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Season">Demander une prestation</a><a class="btn secondary" href="https://www.facebook.com/share/18ce9UDMp1/" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://youtu.be/DFQ1IMdbwro" rel="noopener noreferrer" target="_blank">Vidéo</a></div>
-</div>
-</article>
-<!-- FICHE : Soul paraDOX -->
-<article class="card">
-<img alt="Photo de Soul paraDOX" loading="lazy" src="soul-paradox.jpg"/>
-<div class="content">
-<h2>Soul paraDOX</h2>
-<p class="style">Soul, blues, jazz et musiques du monde</p>
-<p class="description">Un univers acoustique métissé, entre groove, reprises en plusieurs langues et atmosphère élégante.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Soul%20paraDOX">Demander une prestation</a><a class="btn secondary" href="https://www.facebook.com/SoulparaDOX.Trio" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://www.youtube.com/@Soul-paraDOX-trio" rel="noopener noreferrer" target="_blank">YouTube</a></div>
-</div>
-</article>
-<!-- FICHE : The Brownies -->
-<article class="card">
-<img alt="Photo de The Brownies" loading="lazy" src="the-brownies.jpg"/>
-<div class="content">
-<h2>The Brownies</h2>
-<p class="style">Pop-rock</p>
-<p class="description">Un trio aux parcours complémentaires qui revisite un vaste répertoire pop-rock, de Police à Radiohead en passant par Blondie.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=The%20Brownies">Demander une prestation</a><a class="btn secondary" href="https://virtuallysue.github.io/Brownies/" rel="noopener noreferrer" target="_blank">Site web</a><a class="btn secondary" href="https://www.facebook.com/share/19eJC7BWLQ/" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://www.youtube.com/watch?v=7tbPFakJV-g" rel="noopener noreferrer" target="_blank">Vidéo</a><a class="btn secondary" href="https://www.youtube.com/@Les.Brownies" rel="noopener noreferrer" target="_blank">YouTube</a></div>
-</div>
-</article>
-<!-- FICHE : The ROOsters -->
-<article class="card">
-<img alt="Photo de The ROOsters" loading="lazy" src="the-roosters.jpg"/>
-<div class="content">
-<h2>The ROOsters</h2>
-<p class="style">Pop-rock, reprises et compositions</p>
-<p class="description">Cinq artistes pour un concert dynamique mêlant grands classiques rock, pop-rock et compositions originales.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=The%20ROOsters">Demander une prestation</a><a class="btn secondary" href="https://instagram.com/roostersrockenseine" rel="noopener noreferrer" target="_blank">Instagram</a><a class="btn secondary" href="https://www.facebook.com/ROOstersROCK" rel="noopener noreferrer" target="_blank">Facebook</a><a class="btn secondary" href="https://www.youtube.com/playlist?list=PLnE4yWfaULnjH6SMoxXEeRq4Chm_yQM4N" rel="noopener noreferrer" target="_blank">YouTube</a></div>
-</div>
-</article>
-<!-- FICHE : Velvet Echoes -->
-<article class="card">
-<img alt="Photo de Velvet Echoes" loading="lazy" src="velvet-echoes.jpg"/>
-<div class="content">
-<h2>Velvet Echoes</h2>
-<p class="style">Pop-rock acoustique</p>
-<p class="description">Un duo voix-guitare qui revisite les chansons avec sensibilité, groove et énergie, pour des moments musicaux intimistes.</p>
-<div class="actions"><a class="btn" href="demande-prestation.html?artiste=Velvet%20Echoes">Demander une prestation</a><a class="btn secondary" href="https://www.facebook.com/share/1AAsFDAuvs/" rel="noopener noreferrer" target="_blank">Facebook</a></div>
-</div>
-</article>
-<!-- FICHE : HeadBack -->
-<article class="card upcoming">
-<div aria-hidden="true" class="photo-placeholder">🎸</div>
-<div class="content">
-<h2>HeadBack</h2>
-<p class="style">Informations à venir</p>
-<p class="description">Présentation, photos et liens à venir.</p>
-<p class="coming-label">Informations à venir</p>
-<div class="actions"></div>
-</div>
-</article>
-<!-- FICHE : Dark Revenges -->
-<article class="card upcoming">
-<div aria-hidden="true" class="photo-placeholder">🎸</div>
-<div class="content">
-<h2>Dark Revenges</h2>
-<p class="style">Informations à venir</p>
-<p class="description">Présentation, photos et liens à venir.</p>
-<p class="coming-label">Informations à venir</p>
-<div class="actions"></div>
-</div>
-</article>
-<!-- FICHE : Fauves -->
-<article class="card upcoming">
-<div aria-hidden="true" class="photo-placeholder">🎸</div>
-<div class="content">
-<h2>Fauves</h2>
-<p class="style">Informations à venir</p>
-<p class="description">Présentation, photos et liens à venir.</p>
-<p class="coming-label">Informations à venir</p>
-<div class="actions"></div>
-</div>
-</article>
-</div>
+<p class="results-count" id="compteur" aria-live="polite"></p>
+<div id="artistes" class="grid"></div>
+<p id="aucun" class="empty-result" hidden>Aucun artiste ne correspond à votre recherche. Essayez un autre mot-clé.</p>
 <div class="note"><strong>Vous souhaitez organiser un événement ?</strong><p>Toutes les demandes de prestations sont actuellement centralisées par l'association Tous en Scène.</p><a class="btn" href="mailto:tousensceneguerville@gmail.com?subject=Demande%20de%20prestation%20musicale">Contacter l'association</a></div>
 </main><footer><strong>TOUS EN SCÈNE</strong><p>La musique nous rassemble !</p><a href="index.html">Retour à l'accueil</a></footer>
-</body></html>
+<script>
+// POUR AJOUTER UN GROUPE : dupliquer un objet dans cette liste.
+// Pour publier plus tard ses coordonnées, renseigner contactPublic (e-mail)
+// ou telephonePublic (numéro). Les champs vides ne s'affichent pas.
+const artistes = [
+  {
+    "nom": "Acoustic Avenue",
+    "style": "Pop, rock, variété acoustique",
+    "description": "Duo voix-guitare qui revisite les grands titres pop-rock, entre ambiance intimiste et énergie communicative.",
+    "photo": "acoustic-avenue.jpg",
+    "lien": "https://www.instagram.com/duo.acoustic.avenue/",
+    "libelleLien": "Instagram",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Dom Plus",
+    "style": "Soul, blues, pop, jazz, musiques caribéennes",
+    "description": "Une formation acoustique modulable autour de la chanteuse Dom, entre reprises éclectiques et compositions originales.",
+    "photo": "dom-plus.jpg",
+    "lien": "",
+    "libelleLien": "",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Dr Rock & The Famous Merengo",
+    "style": "Soft rock californien, compositions",
+    "description": "Des compositions originales aux harmonies vocales soignées, inspirées du soft rock américain et britannique.",
+    "photo": "dr-rock.jpg",
+    "lien": "https://youtube.com/channel/UCVeZK6RSQvY_3zTqctfzSzQ",
+    "libelleLien": "YouTube",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "DynamiX",
+    "style": "Pop-rock",
+    "description": "Quatre musiciens réunis pour faire vibrer le public avec des classiques rock, une voix puissante et une énergie contagieuse.",
+    "photo": "dynamix.jpg",
+    "lien": "https://www.instagram.com/dynamix_rockgroupe/",
+    "libelleLien": "Instagram",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Juste Filip",
+    "style": "Variété, humour musical, country, blues",
+    "description": "Un artiste solo qui mêle chant, guitare, boucles et humour, avec des formats participatifs et des animations musicales.",
+    "photo": "juste-filip.jpg",
+    "lien": "https://youtu.be/oNMSNbOig_c",
+    "libelleLien": "Vidéo",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Pulpe",
+    "style": "Soul, funk, électro, jazz et percussions",
+    "description": "Un cocktail musical groovy et cuivré, porté par une grande formation à l’énergie communicative.",
+    "photo": "pulp.jpg",
+    "lien": "https://www.instagram.com/pulpgroup/",
+    "libelleLien": "Instagram",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Season",
+    "style": "Rock californien, reprises",
+    "description": "Sept musiciens et trois voix lead pour revisiter le son west coast des années 70 et 80, dans une atmosphère chaleureuse et vintage.",
+    "photo": "season.jpg",
+    "lien": "https://youtu.be/DFQ1IMdbwro",
+    "libelleLien": "Vidéo",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Soul paraDOX",
+    "style": "Soul, blues, jazz et musiques du monde",
+    "description": "Un univers acoustique métissé, entre groove, reprises en plusieurs langues et atmosphère élégante.",
+    "photo": "soul-paradox.jpg",
+    "lien": "https://www.facebook.com/SoulparaDOX.Trio",
+    "libelleLien": "Facebook",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "The Brownies",
+    "style": "Pop-rock",
+    "description": "Un trio aux parcours complémentaires qui revisite un vaste répertoire pop-rock, de Police à Radiohead en passant par Blondie.",
+    "photo": "the-brownies.jpg",
+    "lien": "https://www.youtube.com/@Les.Brownies",
+    "libelleLien": "YouTube",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "The ROOsters",
+    "style": "Pop-rock, reprises et compositions",
+    "description": "Cinq artistes pour un concert dynamique mêlant grands classiques rock, pop-rock et compositions originales.",
+    "photo": "the-roosters.jpg",
+    "lien": "https://www.facebook.com/ROOstersROCK",
+    "libelleLien": "Facebook",
+    "contactPublic": "",
+    "telephonePublic": ""
+  },
+  {
+    "nom": "Velvet Echoes",
+    "style": "Pop-rock acoustique",
+    "description": "Un duo voix-guitare qui revisite les chansons avec sensibilité, groove et énergie, pour des moments musicaux intimistes.",
+    "photo": "velvet-echoes.jpg",
+    "lien": "https://www.facebook.com/share/1CWUrRJAXS/",
+    "libelleLien": "Facebook",
+    "contactPublic": "",
+    "telephonePublic": ""
+  }
+];
+const conteneur=document.getElementById('artistes');
+const recherche=document.getElementById('recherche');
+const filtre=document.getElementById('filtre-style');
+const compteur=document.getElementById('compteur');
+const aucun=document.getElementById('aucun');
+function univers(a){const t=(a.style+' '+a.description).toLowerCase();if(/acoustique|duo voix-guitare/.test(t))return 'acoustique';if(/soul|blues|jazz|funk/.test(t))return 'soul';if(/rock|pop/.test(t))return 'rock';return 'autre'}
+function filtrer(){const q=recherche.value.trim().toLocaleLowerCase('fr');let n=0;conteneur.querySelectorAll('.card').forEach(c=>{const a=artistes[Number(c.dataset.index)];const ok=(!q||(a.nom+' '+a.style+' '+a.description).toLocaleLowerCase('fr').includes(q))&&(!filtre.value||univers(a)===filtre.value);c.hidden=!ok;if(ok)n++});compteur.textContent=n+' artiste'+(n>1?'s':'')+' affiché'+(n>1?'s':'');aucun.hidden=n!==0}
+recherche.addEventListener('input',filtrer);filtre.addEventListener('change',filtrer);
+document.getElementById('effacer').addEventListener('click',()=>{recherche.value='';filtre.value='';filtrer();recherche.focus()});
+artistes.forEach((a,i)=>{
+ const article=document.createElement('article');article.className='card';article.dataset.index=i;
+ const img=document.createElement('img');img.src=a.photo;img.alt='Photo de '+a.nom;img.loading='lazy';article.appendChild(img);
+ const c=document.createElement('div');c.className='content';
+ const h=document.createElement('h2');h.textContent=a.nom;c.appendChild(h);
+ const st=document.createElement('p');st.className='style';st.textContent=a.style;c.appendChild(st);
+ const d=document.createElement('p');d.className='description';d.textContent=a.description;c.appendChild(d);
+ const actions=document.createElement('div');actions.className='actions';
+ function bouton(texte,url,secondaire){const l=document.createElement('a');l.className='btn'+(secondaire?' secondary':'');l.href=url;l.textContent=texte;if(url.startsWith('https://')){l.target='_blank';l.rel='noopener noreferrer'}actions.appendChild(l)}
+ bouton('Demander une prestation','mailto:tousensceneguerville@gmail.com?subject='+encodeURIComponent('Demande de prestation - '+a.nom),false);
+ if(a.lien)bouton(a.libelleLien||'Découvrir',a.lien,true);
+ if(a.contactPublic)bouton('E-mail artiste','mailto:'+a.contactPublic,true);
+ if(a.telephonePublic)bouton('Appeler artiste','tel:'+a.telephonePublic.replace(/[^+\d]/g,''),true);
+ c.appendChild(actions);article.appendChild(c);conteneur.appendChild(article);
+});
+filtrer();
+</script></body></html>
