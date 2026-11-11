@@ -236,7 +236,6 @@ nav a:focus-visible,.btn:focus-visible{outline:3px solid var(--jaune);outline-of
      if(!card.hidden)visible++;
    });
    count.textContent=visible+' artiste'+(visible>1?'s':'')+' ou groupe'+(visible>1?'s':'')+' affiché'+(visible>1?'s':'')+' sur '+cards.length;
- });
  }
  search.addEventListener('input',update);
  buttons.forEach(button=>button.addEventListener('click',()=>{
